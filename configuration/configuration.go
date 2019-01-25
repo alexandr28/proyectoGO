@@ -30,6 +30,7 @@ func GetConfiguration() Configuration {
 	}
 	return c
 }
+// Obtiene una conexion a la DB
 func GetConnection() *gorm.DB {
 	c := GetConfiguration()
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&Local", c.User, c.Password, c.Server, c.Port, c.DataBase)
