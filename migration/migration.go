@@ -4,6 +4,7 @@ import (
 	"../configuration"
 	"../models"
 )
+
 // permite crear las tablas en las bases de datos
 func Migrate() {
 	db := configuration.GetConnection()

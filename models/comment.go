@@ -1,6 +1,7 @@
 package models
 
 import "github.com/jinzhu/gorm"
+
 // Comment del sistema
 type Comment struct {
 	gorm.Model

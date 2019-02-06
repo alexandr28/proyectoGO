@@ -30,6 +30,7 @@ func GetConfiguration() Configuration {
 	}
 	return c
 }
+
 // Obtiene una conexion a la DB
 func GetConnection() *gorm.DB {
 	c := GetConfiguration()
