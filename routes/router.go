@@ -9,5 +9,6 @@ func InitRoutes() *mux.Router {
 	SetLoginRouter(router)
 	SetUserRouter(router)
 	SetCommetRouter(router)
+	SetVoteRouter(router)
 	return router
 }

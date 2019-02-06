@@ -13,10 +13,10 @@ import (
 
 func CommentCreate(w http.ResponseWriter, r *http.Request) {
 	comment := models.Comment{}
-	user:= models.User{}
+	user := models.User{}
 	m := models.Message{}
 
-	user, _= r.Context().Value("user").(models.User)
+	user, _ = r.Context().Value("user").(models.User)
 
 	err := json.NewDecoder(r.Body).Decode(&comment)
 	if err != nil {
@@ -26,7 +26,7 @@ func CommentCreate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	comment.UserID=user.ID
+	comment.UserID = user.ID
 
 	db := configuration.GetConnection()
 	defer db.Close()
@@ -49,7 +49,7 @@ func CommentGetAll(w http.ResponseWriter, r *http.Request) {
 	m := models.Message{}
 	user := models.User{}
 	vote := models.Vote{}
-	user, _ =r.Context().Value("user").(models.User)
+	user, _ = r.Context().Value("user").(models.User)
 	vars := r.URL.Query()
 	db := configuration.GetConnection()
 	defer db.Close()
