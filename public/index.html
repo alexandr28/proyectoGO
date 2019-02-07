@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RealTime</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home</title>
 </head>
 <body>
+
+    <div class="row">
+        <form class="col s12" action="/api/login" method="post" id="form-login">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="email" id="email" name="email" placeholder="Email" class="validate">
+                    <label for="email">Email</label>
+                </div><!-- end input-field -->
+            </div> <!-- end Row class -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="password" id="password" name="password" placeholder="Password" class="validate">
+                    <label for="password">Password</label>
+                </div><!-- end input-field -->
+            </div><!-- end Row class -->
+            <button class="btn waves-effect waves-light" id="btnLogin"  type="submit" name="action">Login
+                <i class="material-icons right">send</i>
+            </button>
+        </form> <!-- end form -->
+    </div> <!-- end Row class -->
+
+    <script src="js/libreria.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--
     <h1>Realtime</h1>
     <div class="container-data" id="containerData"></div>
     <script type="text/javascript">
@@ -15,6 +46,6 @@
         ws.onmessage=function (msg) {
             containerData.innerHTML+="<pre>"+ msg.data  +"</pre>"
         }
-    </script>
+    </script>  -->
 </body>
 </html>
